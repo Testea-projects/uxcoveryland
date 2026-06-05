@@ -234,12 +234,11 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
-.feature__icon--teal   { background: #1873B5; }
-.feature__icon--red    { background: #870606; }
-.feature__icon--orange { background: #693315; }
+.feature__icon--teal   { background: #6AC5DC; }
+.feature__icon--red    { background: #DC4466; }
+.feature__icon--orange { background: #F0A830; }
 
 .feature__item strong {
   display: block;
@@ -335,21 +334,59 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
-/* ── Card Sorting asset ── */
-.csorting__asset {
-  width: 160px;
-  height: auto;
+/* ── Stacked card layers (Card Sorting & Preference Test) ── */
+.stacked-asset {
+  position: relative;
   flex-shrink: 0;
 }
 
-/* ── Preference Test UI ── */
-.pref-ui__asset {
+.stacked-asset__main {
+  position: relative;
+  z-index: 3;
+  display: block;
   width: 160px;
   height: auto;
-  flex-shrink: 0;
   border-radius: 8px;
+}
+
+.stacked-asset__layer {
+  position: absolute;
+  border-radius: 8px;
+}
+
+/* Card Sorting — tarjetas planas que sobresalen hacia arriba */
+.stacked-asset__layer--3 {
+  width: 100%;
+  height: 100%;
+  top: -18px;
+  left: 0;
+  background: #F2B8C0;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.stacked-asset__layer--2 {
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 0;
+  background: #B2DFEC;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Preference Test — silueta gris sutil a la derecha-abajo */
+.stacked-asset__layer--ghost {
+  width: 100%;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  background: #CED4DA;
+  border-radius: 8px;
+  z-index: 1;
 }
 
 
