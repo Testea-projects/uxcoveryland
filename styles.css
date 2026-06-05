@@ -98,11 +98,12 @@ img { display: block; max-width: 100%; }
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: #1a1a2e;
+}
+
+.navbar__logo img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .navbar__actions {

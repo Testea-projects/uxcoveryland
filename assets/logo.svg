@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" role="img" aria-label="UXCovery">
+
+  <!-- ── Logo mark: three overlapping pill shapes ── -->
+  <g style="mix-blend-mode: multiply">
+    <!-- Orange pill -->
+    <rect
+      x="-32" y="-13"
+      width="66" height="26" rx="13"
+      fill="#F5A623"
+      transform="translate(38,52) rotate(-38)"
+    />
+    <!-- Red pill -->
+    <rect
+      x="-33" y="-13"
+      width="66" height="26" rx="13"
+      fill="#E8534A"
+      transform="translate(32,28) rotate(8)"
+    />
+    <!-- Blue pill -->
+    <rect
+      x="-33" y="-13"
+      width="66" height="26" rx="13"
+      fill="#4A8FD4"
+      transform="translate(64,30) rotate(-30)"
+    />
+  </g>
+
+  <!-- ── Logotype ── -->
+  <text
+    x="105" y="52"
+    font-family="'Inter', 'Arial Black', Arial, sans-serif"
+    font-size="36"
+    font-weight="800"
+    letter-spacing="2"
+    fill="#3D3D3D"
+  >UXCOVERY</text>
+
+</svg>
