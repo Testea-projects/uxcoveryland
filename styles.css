@@ -125,9 +125,9 @@ img { display: block; max-width: 100%; }
 
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 46% 54%;
   align-items: center;
-  gap: 40px;
+  gap: 0;
 }
 
 .hero__heading {
@@ -157,31 +157,55 @@ img { display: block; max-width: 100%; }
 
 .hero__cta { font-size: 0.85rem; }
 
-/* Hero visual */
+/* Hero visual — Frame5 exact Figma: 585×406px */
 .hero__visual {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 585 / 406;
+  width: 100%;
 }
 
+/* Vector SVG fills the full frame */
 .hero__vector {
   position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 560px;
-  height: auto;
+  height: 100%;
   z-index: 0;
   pointer-events: none;
-  user-select: none;
 }
 
+/* Circle clip — Figma Ellipse 9: 323×323, left=22.1%, top=8.29% */
+.hero__people-wrap {
+  position: absolute;
+  left: 22.1%;
+  top: 8.29%;
+  width: 55.2%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Body image inside circle — Figma values */
 .hero__people {
-  position: relative;
-  z-index: 1;
-  width: 72%;
-  max-width: 360px;
+  position: absolute;
+  width: 102.79%;
   height: auto;
-  object-fit: contain;
+  left: -1.4%;
+  top: -8.33%;
+}
+
+/* Head shown above + into circle — 28% ensures full faces visible,
+   transition is seamless by Figma geometry */
+.hero__people-head {
+  position: absolute;
+  left: 21.54%;
+  top: 1.66%;
+  width: 56.8%;
+  height: auto;
+  clip-path: inset(0 0 72% 0);
+  z-index: 3;
+  pointer-events: none;
 }
 
 /* ══════════════════════════════════════════
