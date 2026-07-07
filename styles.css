@@ -195,15 +195,15 @@ img { display: block; max-width: 100%; }
   top: -8.33%;
 }
 
-/* Head shown above + into circle — 28% ensures full faces visible,
-   transition is seamless by Figma geometry */
+/* Head shown above circle — gradient mask fades inside circle to avoid hard cut line */
 .hero__people-head {
   position: absolute;
   left: 21.54%;
   top: 1.66%;
-  width: 56.8%;
+  width: 56.75%;
   height: auto;
-  clip-path: inset(0 0 72% 0);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 14%, transparent 22%);
+  mask-image: linear-gradient(to bottom, black 0%, black 14%, transparent 22%);
   z-index: 3;
   pointer-events: none;
 }
